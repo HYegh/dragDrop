@@ -1,0 +1,84 @@
+$border-color: #5ebfff;
+$container-color: #e0e6ff;
+$font-size: 25px;
+
+@mixin img-style() {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  padding: 3px;
+}
+
+.container {
+  width: 600px;
+  max-width: 100%;
+  box-sizing: border-box;
+  border: 1px solid $border-color;
+  margin: 30px auto;
+  padding: 10px;
+  background: $container-color;
+
+  .header{
+    display: flex;
+    flex-direction: row;
+    input{
+	    height: 30px;
+	    width: 450px;
+	    font-size: $font-size;
+	    margin-right: 5px;
+	    flex: 1;
+		}
+		button{
+		  font-size: $font-size;
+		}
+	}
+
+	.buskets{
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    .item {
+	    display: flex;
+	    flex-grow: 1;
+	    font-size: $font-size;
+	    color: white;
+	    justify-content: center;
+	    align-items: center;
+	    border: none;
+	    border-radius: 20px;
+	    background-color: $border-color;
+	    cursor: pointer;
+		}
+	}
+
+	.pictures_wrapper{
+    height: 300px;
+    margin: 10px auto;
+    border: 1px dashed $border-color;
+    .text{
+	    text-align: center;
+	    padding-top: 50px;
+	    font-size: $font-size;
+	    color: #767676;
+		}
+		.image{
+	    display: flex;
+	    justify-content: center;
+	    flex-wrap: wrap;
+	    img{
+		    @include img-style();
+			}
+		}
+	}
+
+	.Album{
+    height: 70px;
+    margin: 10px auto 0;
+    border: 1px dashed $border-color;
+    img{
+	    @include img-style();
+		}
+	}
+
+}
