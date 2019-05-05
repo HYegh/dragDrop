@@ -1,10 +1,11 @@
 import React from 'react';
-import './app.css';
+import './scss/app.scss';
+import Container from "./components/container";
 
 function App() {
   return (
     <div className="App">
-      
+      <Container/>
     </div>
   );
 }
